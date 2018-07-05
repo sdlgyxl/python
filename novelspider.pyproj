@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{134dadf9-cc4b-4c5f-9b85-39ab163160de}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>novelspider\mongo.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="novelspider\items.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="novelspider\mongo.py" />
+    <Compile Include="novelspider\middlewares.py" />
+    <Compile Include="novelspider\pipelines.py" />
+    <Compile Include="novelspider\settings.py" />
+    <Compile Include="novelspider\spiders\novel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="novelspider\spiders\__init__.py" />
+    <Compile Include="novelspider\test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="novelspider\utility.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="novelspider\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="novelspider" />
+    <Folder Include="novelspider\spiders" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
