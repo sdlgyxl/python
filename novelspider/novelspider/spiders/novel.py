@@ -20,7 +20,7 @@ class novelspider(scrapy.Spider):
     name = "novel"
     allowed_domains = ["novel.com"]
     
-    catalogs = []
+    catalogs = ['https://www.23zw.me/olread/76/76441/index.html']
     
     def __init__(self):
         #self.books = MyMongo().read('books', {'name':'恶魔契约'})
